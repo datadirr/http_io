@@ -1,7 +1,8 @@
 name: http_io
 description: A composable, Future-based library for making HTTP requests with multipart.
-version: 1.1.0
-homepage: https://github.com/datadirr/http_io.git
+version: 1.0.0
+homepage: https://datadirr.com
+repository: https://github.com/datadirr/http_io.git
 
 environment:
   sdk: '>=2.19.6 <3.7.7'

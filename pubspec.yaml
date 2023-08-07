@@ -1,11 +1,11 @@
 name: http_io
 description: A composable, Future-based library for making HTTP requests with multipart.
-repository: https://github.com/datadirr/http_io.git
+repository: https://github.com/datadirr/http_io
 homepage: https://datadirr.com
 version: 1.2.0
 
 environment:
-  sdk: '>=2.19.6 <3.7.7'
+  sdk: '>=2.19.6 <4.0.0'
   flutter: ">=2.5.0"
 
 dependencies:
@@ -13,14 +13,14 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  plugin_platform_interface: ^2.1.4
-  http: ^0.13.5
+  plugin_platform_interface: ^2.1.5
+  http: ^1.1.0
   http_parser: ^4.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.1
+  flutter_lints: ^2.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

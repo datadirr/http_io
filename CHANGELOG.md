@@ -1,6 +1,7 @@
 ## 1.3.0
 
-* A composable, Future-based library for making HTTP requests with multipart.
+* add namespace for android.
+* upgrade dependencies.
 
 ## 1.2.0
 

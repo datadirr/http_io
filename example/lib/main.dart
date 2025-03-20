@@ -8,7 +8,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -28,12 +28,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('http_io'),
-        ),
-        body: Center(
-          child: Text('Status: $status'),
-        ),
+        appBar: AppBar(title: const Text('http_io')),
+        body: Center(child: Text('Status: $status')),
       ),
     );
   }

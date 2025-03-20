@@ -3,19 +3,16 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http_io/http_io_method_channel.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
   MethodChannelHttpIo platform = MethodChannelHttpIo();
   const MethodChannel channel = MethodChannel('http_io');
 
-  TestWidgetsFlutterBinding.ensureInitialized();
-
   setUp(() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-        .setMockMethodCallHandler(
-      channel,
-      (MethodCall methodCall) async {
-        return '42';
-      },
-    );
+        .setMockMethodCallHandler(channel, (MethodCall methodCall) async {
+          return '42';
+        });
   });
 
   tearDown(() {

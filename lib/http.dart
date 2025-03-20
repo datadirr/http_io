@@ -6,18 +6,21 @@ import 'package:http_parser/http_parser.dart';
 
 /// Sends an HTTP GET request with the given headers to the given URL.
 Future<Response> get(String url, {Map<String, String>? headers}) async {
-  http_request.Response apiResponse =
-      await http_request.get(Uri.parse(url), headers: headers);
+  http_request.Response apiResponse = await http_request.get(
+    Uri.parse(url),
+    headers: headers,
+  );
   return Response(
-      apiResponse.statusCode,
-      apiResponse.body,
-      apiResponse.bodyBytes,
-      apiResponse.contentLength,
-      apiResponse.headers,
-      apiResponse.isRedirect,
-      apiResponse.persistentConnection,
-      apiResponse.reasonPhrase,
-      apiResponse.request);
+    apiResponse.statusCode,
+    apiResponse.body,
+    apiResponse.bodyBytes,
+    apiResponse.contentLength,
+    apiResponse.headers,
+    apiResponse.isRedirect,
+    apiResponse.persistentConnection,
+    apiResponse.reasonPhrase,
+    apiResponse.request,
+  );
 }
 
 /// Sends an HTTP POST request with the given headers and body to the given URL.
@@ -35,20 +38,29 @@ Future<Response> get(String url, {Map<String, String>? headers}) async {
 /// `"application/x-www-form-urlencoded"`; this cannot be overridden.
 ///
 /// [encoding] defaults to [utf8].
-Future<Response> post(String url,
-    {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
-  http_request.Response apiResponse = await http_request.post(Uri.parse(url),
-      headers: headers, body: body, encoding: encoding);
+Future<Response> post(
+  String url, {
+  Map<String, String>? headers,
+  Object? body,
+  Encoding? encoding,
+}) async {
+  http_request.Response apiResponse = await http_request.post(
+    Uri.parse(url),
+    headers: headers,
+    body: body,
+    encoding: encoding,
+  );
   return Response(
-      apiResponse.statusCode,
-      apiResponse.body,
-      apiResponse.bodyBytes,
-      apiResponse.contentLength,
-      apiResponse.headers,
-      apiResponse.isRedirect,
-      apiResponse.persistentConnection,
-      apiResponse.reasonPhrase,
-      apiResponse.request);
+    apiResponse.statusCode,
+    apiResponse.body,
+    apiResponse.bodyBytes,
+    apiResponse.contentLength,
+    apiResponse.headers,
+    apiResponse.isRedirect,
+    apiResponse.persistentConnection,
+    apiResponse.reasonPhrase,
+    apiResponse.request,
+  );
 }
 
 /// Sends an HTTP PUT request with the given headers and body to the given URL.
@@ -66,20 +78,29 @@ Future<Response> post(String url,
 /// `"application/x-www-form-urlencoded"`; this cannot be overridden.
 ///
 /// [encoding] defaults to [utf8].
-Future<Response> put(String url,
-    {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
-  http_request.Response apiResponse = await http_request.post(Uri.parse(url),
-      headers: headers, body: body, encoding: encoding);
+Future<Response> put(
+  String url, {
+  Map<String, String>? headers,
+  Object? body,
+  Encoding? encoding,
+}) async {
+  http_request.Response apiResponse = await http_request.post(
+    Uri.parse(url),
+    headers: headers,
+    body: body,
+    encoding: encoding,
+  );
   return Response(
-      apiResponse.statusCode,
-      apiResponse.body,
-      apiResponse.bodyBytes,
-      apiResponse.contentLength,
-      apiResponse.headers,
-      apiResponse.isRedirect,
-      apiResponse.persistentConnection,
-      apiResponse.reasonPhrase,
-      apiResponse.request);
+    apiResponse.statusCode,
+    apiResponse.body,
+    apiResponse.bodyBytes,
+    apiResponse.contentLength,
+    apiResponse.headers,
+    apiResponse.isRedirect,
+    apiResponse.persistentConnection,
+    apiResponse.reasonPhrase,
+    apiResponse.request,
+  );
 }
 
 /// Sends an HTTP PATCH request with the given headers and body to the given
@@ -98,62 +119,85 @@ Future<Response> put(String url,
 /// `"application/x-www-form-urlencoded"`; this cannot be overridden.
 ///
 /// [encoding] defaults to [utf8].
-Future<Response> patch(String url,
-    {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
-  http_request.Response apiResponse = await http_request.post(Uri.parse(url),
-      headers: headers, body: body, encoding: encoding);
+Future<Response> patch(
+  String url, {
+  Map<String, String>? headers,
+  Object? body,
+  Encoding? encoding,
+}) async {
+  http_request.Response apiResponse = await http_request.post(
+    Uri.parse(url),
+    headers: headers,
+    body: body,
+    encoding: encoding,
+  );
   return Response(
-      apiResponse.statusCode,
-      apiResponse.body,
-      apiResponse.bodyBytes,
-      apiResponse.contentLength,
-      apiResponse.headers,
-      apiResponse.isRedirect,
-      apiResponse.persistentConnection,
-      apiResponse.reasonPhrase,
-      apiResponse.request);
+    apiResponse.statusCode,
+    apiResponse.body,
+    apiResponse.bodyBytes,
+    apiResponse.contentLength,
+    apiResponse.headers,
+    apiResponse.isRedirect,
+    apiResponse.persistentConnection,
+    apiResponse.reasonPhrase,
+    apiResponse.request,
+  );
 }
 
 /// Sends an HTTP DELETE request with the given headers to the given URL.
-Future<Response> delete(String url,
-    {Map<String, String>? headers, Object? body, Encoding? encoding}) async {
-  http_request.Response apiResponse = await http_request.post(Uri.parse(url),
-      headers: headers, body: body, encoding: encoding);
+Future<Response> delete(
+  String url, {
+  Map<String, String>? headers,
+  Object? body,
+  Encoding? encoding,
+}) async {
+  http_request.Response apiResponse = await http_request.post(
+    Uri.parse(url),
+    headers: headers,
+    body: body,
+    encoding: encoding,
+  );
   return Response(
-      apiResponse.statusCode,
-      apiResponse.body,
-      apiResponse.bodyBytes,
-      apiResponse.contentLength,
-      apiResponse.headers,
-      apiResponse.isRedirect,
-      apiResponse.persistentConnection,
-      apiResponse.reasonPhrase,
-      apiResponse.request);
+    apiResponse.statusCode,
+    apiResponse.body,
+    apiResponse.bodyBytes,
+    apiResponse.contentLength,
+    apiResponse.headers,
+    apiResponse.isRedirect,
+    apiResponse.persistentConnection,
+    apiResponse.reasonPhrase,
+    apiResponse.request,
+  );
 }
 
 /// Sends an HTTP HEAD request with the given headers to the given URL.
 Future<Response> head(String url, {Map<String, String>? headers}) async {
-  http_request.Response apiResponse =
-      await http_request.get(Uri.parse(url), headers: headers);
+  http_request.Response apiResponse = await http_request.get(
+    Uri.parse(url),
+    headers: headers,
+  );
   return Response(
-      apiResponse.statusCode,
-      apiResponse.body,
-      apiResponse.bodyBytes,
-      apiResponse.contentLength,
-      apiResponse.headers,
-      apiResponse.isRedirect,
-      apiResponse.persistentConnection,
-      apiResponse.reasonPhrase,
-      apiResponse.request);
+    apiResponse.statusCode,
+    apiResponse.body,
+    apiResponse.bodyBytes,
+    apiResponse.contentLength,
+    apiResponse.headers,
+    apiResponse.isRedirect,
+    apiResponse.persistentConnection,
+    apiResponse.reasonPhrase,
+    apiResponse.request,
+  );
 }
 
 /// Sends an HTTP multipart request with the given headers or body or file to the given URL.
-Future<Response> multipart(String url,
-    {String method = 'POST',
-    Map<String, String>? headers,
-    Map<String, String>? body,
-    String fileDataParam = 'file',
-    List<FileData>? fileData}) async {
+Future<Response> multipart(
+  String url, {
+  String method = 'POST',
+  Map<String, String>? headers,
+  Map<String, String>? body,
+  String fileDataParam = 'file',
+  List<FileData>? fileData,
+}) async {
   var request = http_request.MultipartRequest(method, Uri.parse(url));
 
   if (headers != null) {
@@ -166,23 +210,29 @@ Future<Response> multipart(String url,
   if (fileData != null) {
     for (int i = 0; i < fileData.length; i++) {
       if (fileData[i].filePath.trim().isNotEmpty) {
-        request.files.add(await http_request.MultipartFile.fromPath(
-            '$fileDataParam[$i]', fileData[i].filePath,
+        request.files.add(
+          await http_request.MultipartFile.fromPath(
+            '$fileDataParam[$i]',
+            fileData[i].filePath,
             filename: fileData[i].fileName,
-            contentType: MediaType.parse(fileData[i].fileMimeType)));
+            contentType: MediaType.parse(fileData[i].fileMimeType),
+          ),
+        );
       }
     }
   }
-  http_request.Response apiResponse =
-      await http_request.Response.fromStream(await request.send());
+  http_request.Response apiResponse = await http_request.Response.fromStream(
+    await request.send(),
+  );
   return Response(
-      apiResponse.statusCode,
-      apiResponse.body,
-      apiResponse.bodyBytes,
-      apiResponse.contentLength,
-      apiResponse.headers,
-      apiResponse.isRedirect,
-      apiResponse.persistentConnection,
-      apiResponse.reasonPhrase,
-      apiResponse.request);
+    apiResponse.statusCode,
+    apiResponse.body,
+    apiResponse.bodyBytes,
+    apiResponse.contentLength,
+    apiResponse.headers,
+    apiResponse.isRedirect,
+    apiResponse.persistentConnection,
+    apiResponse.reasonPhrase,
+    apiResponse.request,
+  );
 }

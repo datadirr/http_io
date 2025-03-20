@@ -13,13 +13,14 @@ class Response {
   BaseRequest? request;
 
   Response(
-      this.statusCode,
-      this.body,
-      this.bodyBytes,
-      this.contentLength,
-      this.headers,
-      this.isRedirect,
-      this.persistentConnection,
-      this.reasonPhrase,
-      this.request);
+    this.statusCode,
+    this.body,
+    this.bodyBytes,
+    this.contentLength,
+    this.headers,
+    this.isRedirect,
+    this.persistentConnection,
+    this.reasonPhrase,
+    this.request,
+  );
 }

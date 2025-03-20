@@ -20,7 +20,6 @@ class HttpIoPlugin : public flutter::Plugin {
   HttpIoPlugin(const HttpIoPlugin&) = delete;
   HttpIoPlugin& operator=(const HttpIoPlugin&) = delete;
 
- private:
   // Called when a method is called on this plugin's channel from Dart.
   void HandleMethodCall(
       const flutter::MethodCall<flutter::EncodableValue> &method_call,
